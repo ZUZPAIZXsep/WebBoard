@@ -13,16 +13,27 @@
     <div align="center">
    
     <h2>ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"]; ?><br></h2>
+    <h2><?php  
+        $x = $_GET["id"];
+        if (($x % 2)==0) {
+            echo "เป็นกระทู้หมายเลขคู่";
+        }
+        else {
+            echo "เป็นกระทู้หมายเลขคี่";
+        }
+    
+    ?></h2><br>
     <table style="border: 2px solid black; width: 40%" align="center">
         <tr><td style="background-color: #6CD2FE;" colspan="2">แสดงความคิดเห็น</td></tr>
         <tr><td><textarea name="comment" id="" cols="50" rows="10"></textarea></td></tr>
         <tr><td><input type="submit" value="ส่งข้อความ"/></td></tr>
+
             
                 
            
         </table> 
 
     </div><br>
-    <div align ="center"><a href="index.html">กลับไปหน้าหลัก</a></div>
+    <div align ="center"><a href="index.php">กลับไปหน้าหลัก</a></div>
 </body>
 </html>

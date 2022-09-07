@@ -11,9 +11,31 @@
     <hr>
     <br>
     <div align="center">
-    <b>เข้าสู่ระบบด้วย</b><br>
-    <?php echo "Login = ". $_POST["login"] ?><br>
-    <?php echo "Password = ". $_POST["pwd"]?>
+    
+    
+    <?php 
+        $user =  $_POST["login"];
+        $pass =  $_POST["pwd"];
+
+        if ($user == 'admin' && $pass == 'ad1234') {
+            echo "ยินดีต้อนรับคุณ ADMIN";
+
+        }
+        else if ($user == 'member' && $pass == 'mem1234') {
+            echo "ยินดีต้อนรับคุณ MEMBER";
+        }
+        else if ($user == 'ZUZPAIZXsep' && $pass == 'ZUZPAIZX1234') {
+            echo "ยินดีต้อนรับคุณ ZUZPAIZX";
+        }
+
+        else {
+            echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+        }
+
+    
+    ?><br>
+
     </div>
+    <div align ="center"><a href="index.php">กลับไปหน้าหลัก</a></div>
 </body>
 </html>
