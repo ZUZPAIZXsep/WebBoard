@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1 align="center">Webboard ZUZPAIZXsep</h1>
+<h1 align="center">WebBoard ZUZPAIZXsep</h1>
     <hr>
     <br>
     <div align="center">

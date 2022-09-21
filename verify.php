@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['id'])){
+        header("location:index.php");
+        die();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +21,22 @@
     
     
     <?php 
+        
         $user =  $_POST["login"];
         $pass =  $_POST["pwd"];
 
         if ($user == 'admin' && $pass == 'ad1234') {
             echo "ยินดีต้อนรับคุณ ADMIN";
+            $_SESSION["username"] = "admin";
+            $_SESSION["role"] = "a";
+            $_SESSION["id"] = session_id();
 
         }
         else if ($user == 'member' && $pass == 'mem1234') {
             echo "ยินดีต้อนรับคุณ MEMBER";
+            $_SESSION["username"] = "member";
+            $_SESSION["role"] = "m";
+            $_SESSION["id"] = session_id();
         }
         else if ($user == 'ZUZPAIZXsep' && $pass == 'ZUZPAIZX1234') {
             echo "ยินดีต้อนรับคุณ ZUZPAIZX";
