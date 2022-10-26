@@ -57,7 +57,7 @@
     } else{
 ?>
     <body>
-    <div class="container" >
+    <div class="container-fluid" >
     <H1 style="font-size: 200%"><center><b> WebBoard ZUZPAIZXsep</b></center></H1>
         <hr>
     <?php include "nav.php" ?>  

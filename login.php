@@ -19,7 +19,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
     <h1><center>WebBoard ZUZPAIZXsep</h1><br>
     <?php include "nav.php";?><br>
     <div class="row">
