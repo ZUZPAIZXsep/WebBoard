@@ -11,6 +11,13 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
     <title>Document</title>
+
+    <script>
+        function myFunction1(){
+            let r=confirm("ต้องการจะลบจริงหรือไม่");
+            return r;
+        }
+    </script>
 </head>
 <?php
     if(!isset($_SESSION["id"])){
@@ -84,7 +91,8 @@
             for($i=1;$i<=10;$i++) {
                 echo "<tr><td><a href=post.php?id="."$i"." style=text-decoration:none>กระทู้ที่ ".$i."</a></td>";
                 if($_SESSION['role']=='a'){
-                    echo "<td><a href=delete.php?id=$i class='btn btn-danger btn-sm'><i class='bi bi-trash'></i></td>"; 
+                    echo "<td><a href=delete.php?id=$i class='btn btn-danger btn-sm' onclick='return myFunction1();'>
+                    <i class='bi bi-trash'></i></a></td>"; 
                 }
                 echo "</tr>";
             }
